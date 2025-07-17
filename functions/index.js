@@ -6,12 +6,12 @@ import exec from 'child_process'
 import fs from 'fs'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-import Client from '@azure-rest/ai-inference'
+import Client, {isUnexpected} from '@azure-rest/ai-inference'
 import {AzureKeyCredential} from '@azure/core-auth'
 
 dotenv.config()
 
-const model = "meta/Llama-4-Scout-17B-16E-Instruct"
+const model = "openai/gpt-4.1"
 const token = process.env["KEY"]
 const endpoint ="https://models.github.ai/inference"
 
@@ -21,6 +21,7 @@ const client = Client(
 )
 
 const scanner = async (text) => {
+    const classes = fs.readFileSync("classes.txt", "utf-8")
     const response = await client.path("/chat/completions").post({
         body: {
             model: model, 
@@ -28,13 +29,15 @@ const scanner = async (text) => {
             top_p: 1, 
             temperature: 0, 
             messages: [
-                {role: "user", content: "are there any bugs, malware or backdoors in this code " + text + " in 50 words or less, please"}
+                {role: "user", content: "are there any bugs, malware or backdoors in this code " + text + " in 50 words or less and give it a class " + classes + ", thank you"}
             ]
         }
-    })
+    }) 
+    if(isUnexpected(response)){
+        return response.body.error
+    }
     return response.body.choices[0].message.content
 }
-
 export const codesafe = functions.https.onRequest({cors: true}, async (req, res) => {
     const {repo, path} = req.query
     const folder = repo.split("/")

@@ -1,0 +1,7 @@
+class 0: safe code (does no damage)
+class 1: annoying but harmless
+class 2: data theft or data deletion
+class 3: os damaging however you can just replace it
+class 4: malware like spyware or ransomware (just something that stays on your computer)
+class 5: computer gets broken (you have to buy new device)
+class 6: social engineering (no IT fix)
