@@ -1,0 +1,27 @@
+{
+  "name": "codesafe",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "codesafe helps you find malware, bugs and backdoors in github repos using AI and firebase cloud functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jamcha123/codeSafe.git"
+  },
+  "keywords": [
+    "ai",
+    "malware",
+    "bugs",
+    "backdoors",
+    "firebase"
+  ],
+  "author": "jamcha123",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jamcha123/codeSafe/issues"
+  },
+  "homepage": "https://github.com/Jamcha123/codeSafe#readme"
+}
