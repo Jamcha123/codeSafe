@@ -1,6 +1,6 @@
 {
   "name": "codesafe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "codesafe helps you find malware, bugs and backdoors in github repos using AI and firebase cloud functions",
   "main": "index.js",

@@ -1,5 +1,7 @@
 codesafe npm is a npm package that uses AI (gpt-4.1) to tell you if a code file is safe or dangerous
 
+codeSafe web app: https://codesafe-506d9.web.app
+
 codesafe example: 
 
     import fs from 'fs'
