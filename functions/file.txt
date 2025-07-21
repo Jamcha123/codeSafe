@@ -1,0 +1,7 @@
+class 0: safe 
+class 1: annoying but harmless
+class 2: social engineering (not a IT problem)
+class 3: data theft or data deletion
+class 4: malware like spyware and ransomware
+class 5: os damaging (you might need to replace the OS)
+class 6: complete destruction of computer

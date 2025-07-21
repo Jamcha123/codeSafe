@@ -2,11 +2,18 @@
 @import "tailwindcss";
 
 @layer components{
-    .plain, .plains{
+    .plain, .plains, .keys{
         @apply text-xl text-black
     }
     .plains{
         @apply translate-y-[30%]
+    }
+    .keys{
+        @apply text-2xl
+    }
+    .items{
+        @apply w-[100%] h-[2em] m-auto p-[0] relative bg-transparent
+        flex flex-row align-middle justify-center text-center
     }
 }
 
